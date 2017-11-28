@@ -1,0 +1,50 @@
+﻿@model ParabolicFunction6.Models.FormModel
+
+<h3>Function data</h3>
+<form method="get">
+    <table>
+        <tr>
+            <td>
+                Function: y =
+
+            </td>
+            <td>
+                <span>@Html.ValidationMessageFor(model => model.koef_a)</span>
+                <input required class="text-box single-line" data-val="true" data-val-number="It should be a number" data-val-required="The field must be set" id="koef_a" name="koef_a" type="number" step="any">                            
+                x^2+
+                <span>@Html.ValidationMessageFor(model => model.koef_b)</span>
+                <input required class="text-box single-line" data-val="true" data-val-number="It should be a number" data-val-required="The field must be set" id="koef_b" name="koef_b" type="number" step="any">          
+                x+
+                <span>@Html.ValidationMessageFor(model => model.koef_c)</span>
+                <input required class="text-box single-line" data-val="true" data-val-number="It should be a number" data-val-required="The field must be set" id="koef_c" name="koef_c" type="number" step="any">
+               
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Step:
+            </td>
+            <td>
+                <span>@Html.ValidationMessageFor(model => model.step)</span>
+                <input required class="text-box single-line" data-val="true" data-val-number="It should be a number" data-val-required="The field must be set" id="step" name="step" type="number" step="any">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Range:
+            </td>
+            <td>
+                <span>@Html.ValidationMessageFor(model => model.lowerBound)</span>
+                <input required class="text-box single-line" data-val="true" data-val-number="It should be a number" data-val-required="The field must be set" id="lowerBound" name="lowerBound" type="number" step="any">
+                to
+                <span>@Html.ValidationMessageFor(model => model.upperBound)</span>
+                <input required class="text-box single-line" data-val="true" data-val-number="It should be a number" data-val-required="The field must be set" id="upperBound" name="upperBound" type="number" step="any">
+            </td>
+        </tr>
+        
+
+        <tr><td><input type="submit" value="Plot" class="btn btn-default buttonPlot" /> </td><td></td></tr>
+</table>
+    
+</form>
+
